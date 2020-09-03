@@ -1,7 +1,7 @@
 from selenium import webdriver
 import random
 
-driver = webdriver.Chrome(executable_path='/Users/w0rtex/Desktop/Python Web Bot/chromedriver')
+driver = webdriver.Chrome(executable_path='chromedriver')
 driver.get("https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&hl=hy&dsh=S-1509018558%3A1599071561230994&gmb=exp&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp")
 
 names = open('names.txt', 'r')
@@ -34,7 +34,7 @@ secondPasswd.send_keys(password)
 
 firstBtn.click()
 
-numDriver = webdriver.Chrome(executable_path='/Users/w0rtex/Desktop/Python Web Bot/chromedriver')
+numDriver = webdriver.Chrome(executable_path='chromedriver')
 numDriver.get("https://temp-sms.org/")
 
 number = numDriver.find_element_by_css_selector('.number.black-text')
@@ -44,3 +44,9 @@ number.click()
 
 numInp = driver.find_element_by_id('phoneNumberId')
 numInp.send_keys(number_txt)
+
+secondBtn = driver.find_element_by_css_selector('.VfPpkd-RLmnJb')
+secondBtn.click()
+
+#numDriver.quit()
+#driver.quit()
